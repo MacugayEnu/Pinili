@@ -1,0 +1,231 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+    font-family: "Poppins", sans-serif;
+    background-image:linear-gradient(rgba(50, 50, 50, 0.75),rgba(50, 50, 50, 0.75)), url('images/baka.jpg');
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  .nav-bar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    padding: 0 20px;
+  }
+  
+  .logo {
+    width: 100px;
+  }
+  
+  .logo img{
+    width: 100px;
+  }
+  
+  .menu{
+    display: flex;
+    list-style: none;
+  }
+  
+  .menu li{
+    margin: 0 10px;
+  }
+  
+  .menu li a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+  }
+  
+  .menu li a::after{
+    content: "";
+    height: 2px;
+    width: 0;
+    background: #2f0096;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .menu li a:hover::after{
+    width: 100%;
+  }
+  
+  .open-menu, .close-menu{
+    position: absolute;
+    color: #009688;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+  }
+  
+  .open-menu{
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+  }
+  
+  .close-menu{
+    top: 20px;
+    right: 20px;
+  }
+  
+  #check{
+    display: none;
+  }
+  
+  .content{
+    flex-basis: 50%;
+  }
+  
+  .col-card{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  h1{
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+    color: #201f1f;
+    font-size: 120px;
+    font-family: 'Roboto';
+  }
+  
+  p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #c0bcbc;
+    text-align: justify;
+    font-size: 30px;
+    margin: 40px;
+    line-height: 30px;
+  }
+  .container{
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+  
+  }
+  .card{
+    width: 250px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s;
+  }
+  
+  .card1{
+    background-image: url('/MidtermProject/img/revolt\ 1.jpg');
+  }
+  
+  .card2{
+    background-image: url('/MidtermProject/img/revolt\ 2.jpg');
+  }
+  
+  .card3{
+    background-image: url('/MidtermProject/img/piddig.jpg');
+  }
+  
+  .card4{
+    background-image: url('/MidtermProject/img/sunflower.jpg');
+  }
+  
+  .card:hover{
+    transform: translateY(-10px);
+  }
+  
+  h5{
+    color: #fff;
+  }
+  
+  @media screen and (max-width:768px) {
+  
+    body{
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 100%;
+    }
+    
+    .menu{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 88%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: rgb(188, 187, 187);
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li{
+        margin-top: 40px;
+    }
+    
+    .menu li a{
+        padding: 10px;
+    }
+    
+    .open-menu, .close-menu{
+        display: block;
+    }
+    
+    #check:checked ~ .menu{
+        right: 0;
+    }
+  
+    .container{
+        display: flex;
+        height: 88%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .col-card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+  
+    .card{
+        width: 400px;
+        height: 400px;
+    }
+  }
+  
